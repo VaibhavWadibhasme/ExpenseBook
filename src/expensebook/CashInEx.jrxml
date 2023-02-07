@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bca4c2c6-46c9-4045-9df1-7ac5dec7f429">
+	<property name="ireport.zoom" value="1.1000000000000005"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[select * from online_expenses]]>
+	</queryString>
+	<field name="sr_no" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="credit_debit" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="remark" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="source_category" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="amount" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="70" uuid="e5b66468-82b2-4c7e-89f8-2ea9686e0b4f"/>
+			</rectangle>
+			<staticText>
+				<reportElement style="Title" x="171" y="0" width="197" height="33" forecolor="#9900CC" uuid="527bc92e-e25d-43da-b30d-ee23491370c6"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Expensesbook]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="184" y="33" width="150" height="22" uuid="b5d3e47c-e6b9-4f91-96f0-5834da22c152"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Cash In Expenses]]></text>
+			</staticText>
+			<image>
+				<reportElement x="22" y="10" width="94" height="45" uuid="93649865-a180-42d7-b784-be0284875fc7"/>
+				<imageExpression><![CDATA["G:\\JAVA Program\\img\\expenceimg\\3.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="35" uuid="c099ca1d-cfee-4e5f-8a6e-41af66ce8c36"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement style="Column header" x="0" y="0" width="78" height="34" forecolor="#9900CC" uuid="9dc0656a-7ec0-438e-87e1-b72625fe5c0f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[sr_no]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="78" y="0" width="106" height="34" forecolor="#9900CC" uuid="d7a8bbe1-4345-4e52-9398-f8098cd61292"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[credit_debit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="184" y="0" width="92" height="34" forecolor="#9900CC" uuid="dcd025ff-0ce9-45f2-826c-87dddc4cdda5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="276" y="0" width="82" height="34" forecolor="#9900CC" uuid="767a891d-9ed5-428a-bf99-13bb17f7e2a9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[remark]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="358" y="0" width="102" height="34" forecolor="#9900CC" uuid="14df5492-470e-404c-ad6e-da786ae207a6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[source_category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="460" y="0" width="92" height="34" forecolor="#9900CC" uuid="f763773c-d778-40bf-baf8-f79ff855d4f5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[amount]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="1" width="555" height="22" uuid="23290cab-74fe-49db-a803-f7607cd181ca"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="78" height="23" uuid="4e6965e2-ef4c-4c4c-b144-f13d240c1626"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{sr_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="78" y="0" width="106" height="23" uuid="8801f700-4888-42ba-a80f-dd184251e75b"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{credit_debit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="276" y="0" width="92" height="23" uuid="a2085e26-e13c-4fc6-9802-4962b383d61a"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{remark}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="368" y="0" width="92" height="23" uuid="03d0ada3-dacf-495a-a537-75a90f66ffc3"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{source_category}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="460" y="0" width="92" height="23" uuid="1329cc8b-dae6-4dfe-ac3a-2ee2588379a5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="184" y="1" width="92" height="22" uuid="4a7030a8-5743-4b88-b987-eb21477e096a"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="fb5787f3-c177-49c3-ab73-821990147336"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="0c8bbb8c-7f17-4f2c-bf7a-92e6437134ca"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="4ea38e79-3128-466d-8248-b0789a1e2b9c"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="60799607-a39a-4763-8518-56af121a2968"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="217" y="0" width="20" height="20" uuid="85bbe274-54a7-4a0a-965c-eca6d631d8fd"/>
+				<imageExpression><![CDATA["G:\\JAVA Program\\img\\expenceimg\\copyWrite.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="237" y="0" width="100" height="20" uuid="755d465a-0164-4e96-b7fa-41fd14f7715a"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Vaibhav Wadibhasme]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
